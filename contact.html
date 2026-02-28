@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>Your Name | Contact</title>
+    <meta
+      name="description"
+      content="Get in touch with Your Name Photography for commissions, collaborations, and print inquiries."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page">
+    <header>
+      <div class="container">
+        <div class="nav">
+          <div>
+            <div class="nav-brand">Your Name Photography</div>
+            <div class="nav-tagline">Atmospheric stories in still frames</div>
+          </div>
+          <nav class="nav-links" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section aria-labelledby="contact-heading">
+        <div class="container">
+          <h1 id="contact-heading" class="section-heading">Get in Touch</h1>
+          <p class="section-intro">
+            Whether you have a commission in mind, are interested in prints, or
+            simply want to say hello — I'd love to hear from you. Fill out the
+            form below or reach out directly through any of the social channels.
+          </p>
+
+          <!-- Contact layout: form on the left, info on the right -->
+          <div class="contact-layout">
+
+            <!-- Contact form -->
+            <!-- NOTE: This form is front-end only. Backend handling is not implemented.
+                 To enable submissions, connect it to a service like Formspree (https://formspree.io)
+                 by setting the action attribute and method="POST". -->
+            <div class="contact-card">
+              <form
+                class="contact-form-grid"
+                action="#"
+                method="POST"
+                novalidate
+              >
+                <div class="field">
+                  <label for="contact-name">Name</label>
+                  <input
+                    id="contact-name"
+                    class="input"
+                    type="text"
+                    name="name"
+                    placeholder="Jane Smith"
+                    required
+                    autocomplete="name"
+                  />
+                </div>
+
+                <div class="field">
+                  <label for="contact-email">Email</label>
+                  <input
+                    id="contact-email"
+                    class="input"
+                    type="email"
+                    name="email"
+                    placeholder="jane@example.com"
+                    required
+                    autocomplete="email"
+                  />
+                </div>
+
+                <div class="field">
+                  <label for="contact-subject">Subject</label>
+                  <input
+                    id="contact-subject"
+                    class="input"
+                    type="text"
+                    name="subject"
+                    placeholder="Commission, print inquiry, collaboration…"
+                  />
+                </div>
+
+                <div class="field">
+                  <label for="contact-message">Message</label>
+                  <textarea
+                    id="contact-message"
+                    class="textarea"
+                    name="message"
+                    placeholder="Tell me a little about your project or what you have in mind…"
+                    required
+                  ></textarea>
+                </div>
+
+                <div>
+                  <button type="submit" class="btn btn-primary">
+                    Send Message
+                  </button>
+                  <small style="display: block; margin-top: 0.75rem; color: var(--color-muted);">
+                    <!-- Update response time to reflect your availability. -->
+                    I typically respond within 2–3 business days.
+                  </small>
+                </div>
+              </form>
+            </div>
+
+            <!-- Contact info & social links -->
+            <div class="contact-meta">
+
+              <div class="contact-meta-block">
+                <div class="contact-label">Email</div>
+                <!-- Replace with your actual email address -->
+                <div class="contact-value">
+                  <a
+                    href="mailto:hello@yourname.com"
+                    style="color: var(--color-accent); text-decoration: underline;"
+                  >hello@yourname.com</a>
+                </div>
+              </div>
+
+              <div class="contact-meta-block">
+                <div class="contact-label">Based in</div>
+                <!-- Replace with your location -->
+                <div class="contact-value">Your City, Your Country</div>
+              </div>
+
+              <div class="contact-meta-block">
+                <div class="contact-label">Availability</div>
+                <!-- Update to reflect your current availability for commissions -->
+                <div class="contact-value">Open for commissions &amp; collaborations worldwide</div>
+              </div>
+
+              <div class="contact-meta-block">
+                <div class="contact-label">Follow Along</div>
+                <!-- Replace each href with your actual profile URLs -->
+                <div class="social-links">
+                  <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                  >Instagram</a>
+                  <a
+                    href="https://www.behance.net/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Behance"
+                  >Behance</a>
+                  <a
+                    href="https://vsco.co/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="VSCO"
+                  >VSCO</a>
+                  <a
+                    href="https://www.flickr.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Flickr"
+                  >Flickr</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <div>&copy; 2026 Your Name Photography. All rights reserved.</div>
+          <div class="footer-meta">
+            <span>Available worldwide</span>
+            <span>Portfolio template &mdash; customize with your own work.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
