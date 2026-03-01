@@ -6,10 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1"
     />
-    <title>Your Name Photography | Gallery</title>
+    <title>Shot by Sheyla | Gallery</title>
     <meta
       name="description"
-      content="Browse the photography portfolio of Your Name — landscapes, portraits, and street photography from around the world."
+      content="Browse the photography portfolio of Sheyla — landscapes, portraits, and street photography from around the world."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,7 +24,7 @@
       <div class="container">
         <div class="nav">
           <div>
-            <div class="nav-brand">Your Name Photography</div>
+            <div class="nav-brand">Shot by Sheyla</div>
             <div class="nav-tagline">Atmospheric stories in still frames</div>
           </div>
           <nav class="nav-links" aria-label="Main navigation">
@@ -38,262 +38,547 @@
     </header>
 
     <main>
-      <section aria-labelledby="gallery-heading">
-        <div class="container">
+      <section aria-labelledby="gallery-heading" class="gallery-intro-section">
+        <div class="container container--wide">
           <h1 id="gallery-heading" class="section-heading">Gallery</h1>
           <p class="section-intro">
             A selection of work spanning landscape, portrait, and street photography.
-            <!-- Update this description with your own voice and the themes your work explores. -->
-            Replace the placeholder images below with your own photographs by swapping out the
-            files in the <code>images/</code> folder.
           </p>
 
-          <!-- Filter chips — visual only; no JavaScript required -->
+          <!-- Filter chips -->
           <div class="gallery-toolbar" aria-label="Gallery categories">
             <div class="gallery-filters" role="list">
-              <span class="chip chip--active" role="listitem">All</span>
-              <span class="chip" role="listitem">Landscape</span>
-              <span class="chip" role="listitem">Portrait</span>
-              <span class="chip" role="listitem">Street</span>
+              <button class="chip chip--active" data-filter="all">All</button>
+              <button class="chip" data-filter="landscape">Landscape</button>
+              <button class="chip" data-filter="people">People</button>
+              <button class="chip" data-filter="street">Street</button>
+              <button class="chip" data-filter="nature">Nature</button>
+              <button class="chip" data-filter="animals">Animals</button>
+              <button class="chip" data-filter="cars">Cars</button>
             </div>
-            <p class="gallery-note">
-              <!-- Remove this note once you have replaced all placeholder images. -->
-              Placeholder images — swap with your own work.
-            </p>
           </div>
-        </div>
-      </section>
 
-      <!-- ═══════════════════════════════════════════════════════
-           LANDSCAPE SECTION
-           Replace images/landscape-1.jpg … images/landscape-6.jpg
-           with your own landscape photographs (recommended: 1600 × 1200 px or wider).
-      ═══════════════════════════════════════════════════════ -->
-      <section aria-labelledby="landscape-heading">
-        <div class="container">
-          <h2 id="landscape-heading" class="section-heading">Landscape</h2>
+          <!-- Flat gallery grid — all categories in one grid -->
+          <div class="gallery-grid" id="gallery-grid">
 
-          <div class="gallery-grid">
-            <!-- Replace images/landscape-1.jpg with your own file -->
-            <figure class="gallery-item">
-              <img
-                src="images/landscape-1.jpg"
-                alt="Landscape photograph placeholder 1"
-              />
+            <!-- LANDSCAPE -->
+            <figure class="gallery-item" data-category="landscape" id="hawaiilandscape1">
+              <img src="images/hawaiilandscape1.jpg" alt="Coastal view in Hawaii" />
               <figcaption class="gallery-caption">
-                <span>Landscape 01</span>
-                <span><!-- Add location or year --></span>
+                <span>Hawaii Coast</span>
               </figcaption>
             </figure>
 
-            <!-- Replace images/landscape-2.jpg with your own file -->
-            <figure class="gallery-item">
-              <img
-                src="images/landscape-2.jpg"
-                alt="Landscape photograph placeholder 2"
-              />
+            <figure class="gallery-item" data-category="landscape" id="DSCF1982">
+              <img src="images/DSCF1982.JPG" alt="Hawaii countryside farmland overlooking the ocean" />
               <figcaption class="gallery-caption">
-                <span>Landscape 02</span>
-                <span><!-- Add location or year --></span>
+                <span>Hawaii Countryside</span>
               </figcaption>
             </figure>
 
-            <!-- Replace images/landscape-3.jpg with your own file -->
-            <figure class="gallery-item">
-              <img
-                src="images/landscape-3.jpg"
-                alt="Landscape photograph placeholder 3"
-              />
+            <figure class="gallery-item" data-category="landscape" id="DSCF1967">
+              <img src="images/DSCF1967.jpg" alt="Surfers in the ocean viewed from a clifftop" />
               <figcaption class="gallery-caption">
-                <span>Landscape 03</span>
-                <span><!-- Add location or year --></span>
+                <span>Surfers</span>
               </figcaption>
             </figure>
 
-            <!-- Replace images/landscape-4.jpg with your own file -->
-            <figure class="gallery-item">
-              <img
-                src="images/landscape-4.jpg"
-                alt="Landscape photograph placeholder 4"
-              />
+            <figure class="gallery-item gallery-item--portrait" data-category="landscape">
+              <img src="images/DSCF2537.jpg" alt="Abandoned shack surrounded by palm trees and dry grass" />
               <figcaption class="gallery-caption">
-                <span>Landscape 04</span>
-                <span><!-- Add location or year --></span>
+                <span>Abandoned</span>
               </figcaption>
             </figure>
 
-            <!-- Replace images/landscape-5.jpg with your own file -->
-            <figure class="gallery-item">
-              <img
-                src="images/landscape-5.jpg"
-                alt="Landscape photograph placeholder 5"
-              />
+            <figure class="gallery-item gallery-item--portrait" data-category="landscape">
+              <img src="images/DSCF1161.jpg" alt="Wooden boardwalk over wetlands with mountains in the background" />
               <figcaption class="gallery-caption">
-                <span>Landscape 05</span>
-                <span><!-- Add location or year --></span>
+                <span>Wetlands</span>
               </figcaption>
             </figure>
 
-            <!-- Replace images/landscape-6.jpg with your own file -->
-            <figure class="gallery-item">
-              <img
-                src="images/landscape-6.jpg"
-                alt="Landscape photograph placeholder 6"
-              />
+            <figure class="gallery-item gallery-item--portrait" data-category="landscape">
+              <img src="images/DSCF2553.jpg" alt="Hawaii beach with a yellow lifeguard tower and palm trees" />
               <figcaption class="gallery-caption">
-                <span>Landscape 06</span>
-                <span><!-- Add location or year --></span>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <!-- ═══════════════════════════════════════════════════════
-           PORTRAIT SECTION
-           Replace images/portrait-1.jpg … images/portrait-4.jpg
-           with your own portrait photographs (recommended: 1200 × 1600 px — portrait orientation).
-      ═══════════════════════════════════════════════════════ -->
-      <section aria-labelledby="portrait-heading">
-        <div class="container">
-          <h2 id="portrait-heading" class="section-heading">Portrait</h2>
-
-          <div class="gallery-grid">
-            <!-- Replace images/portrait-1.jpg with your own file -->
-            <figure class="gallery-item">
-              <img
-                src="images/portrait-1.jpg"
-                alt="Portrait photograph placeholder 1"
-              />
-              <figcaption class="gallery-caption">
-                <span>Portrait 01</span>
-                <span><!-- Add subject or year --></span>
+                <span>Hawaii Beach</span>
               </figcaption>
             </figure>
 
-            <!-- Replace images/portrait-2.jpg with your own file -->
-            <figure class="gallery-item">
-              <img
-                src="images/portrait-2.jpg"
-                alt="Portrait photograph placeholder 2"
-              />
+            <figure class="gallery-item gallery-item--portrait" data-category="landscape">
+              <img src="images/DSCF2044.JPG" alt="Waterfall cascading into a tropical pool surrounded by lush greenery" />
               <figcaption class="gallery-caption">
-                <span>Portrait 02</span>
-                <span><!-- Add subject or year --></span>
+                <span>Waterfall</span>
               </figcaption>
             </figure>
 
-            <!-- Replace images/portrait-3.jpg with your own file -->
-            <figure class="gallery-item">
-              <img
-                src="images/portrait-3.jpg"
-                alt="Portrait photograph placeholder 3"
-              />
+            <!-- PEOPLE -->
+            <figure class="gallery-item gallery-item--portrait" data-category="people">
+              <img src="images/DSCF2289.jpg" alt="Person fishing at night with a glowing rod" />
               <figcaption class="gallery-caption">
-                <span>Portrait 03</span>
-                <span><!-- Add subject or year --></span>
+                <span>Night Fishing</span>
               </figcaption>
             </figure>
 
-            <!-- Replace images/portrait-4.jpg with your own file -->
-            <figure class="gallery-item">
-              <img
-                src="images/portrait-4.jpg"
-                alt="Portrait photograph placeholder 4"
-              />
+            <figure class="gallery-item gallery-item--portrait" data-category="people">
+              <img src="images/DSCF2598.jpg" alt="Couple sitting on grass sharing food at golden hour" />
               <figcaption class="gallery-caption">
-                <span>Portrait 04</span>
-                <span><!-- Add subject or year --></span>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <!-- ═══════════════════════════════════════════════════════
-           STREET SECTION
-           Replace images/street-1.jpg … images/street-5.jpg
-           with your own street photographs (recommended: 1600 × 1200 px or wider).
-      ═══════════════════════════════════════════════════════ -->
-      <section aria-labelledby="street-heading">
-        <div class="container">
-          <h2 id="street-heading" class="section-heading">Street</h2>
-
-          <div class="gallery-grid">
-            <!-- Replace images/street-1.jpg with your own file -->
-            <figure class="gallery-item">
-              <img
-                src="images/street-1.jpg"
-                alt="Street photograph placeholder 1"
-              />
-              <figcaption class="gallery-caption">
-                <span>Street 01</span>
-                <span><!-- Add city or year --></span>
+                <span>Golden Hour</span>
               </figcaption>
             </figure>
 
-            <!-- Replace images/street-2.jpg with your own file -->
-            <figure class="gallery-item">
-              <img
-                src="images/street-2.jpg"
-                alt="Street photograph placeholder 2"
-              />
+            <figure class="gallery-item gallery-item--portrait" data-category="people" id="DSCF2666">
+              <img src="images/DSCF2666.jpg" alt="Two people viewing a classical painting in a museum" />
               <figcaption class="gallery-caption">
-                <span>Street 02</span>
-                <span><!-- Add city or year --></span>
+                <span>Museum</span>
               </figcaption>
             </figure>
 
-            <!-- Replace images/street-3.jpg with your own file -->
-            <figure class="gallery-item">
-              <img
-                src="images/street-3.jpg"
-                alt="Street photograph placeholder 3"
-              />
+            <figure class="gallery-item" data-category="people">
+              <img src="images/DSCF1204.jpg" alt="Two women in red coats looking out over a lake and mountains from a pier" />
               <figcaption class="gallery-caption">
-                <span>Street 03</span>
-                <span><!-- Add city or year --></span>
+                <span>The View</span>
               </figcaption>
             </figure>
 
-            <!-- Replace images/street-4.jpg with your own file -->
-            <figure class="gallery-item">
-              <img
-                src="images/street-4.jpg"
-                alt="Street photograph placeholder 4"
-              />
+            <!-- STREET -->
+            <figure class="gallery-item gallery-item--portrait" data-category="street">
+              <img src="images/DSCF2178.jpg" alt="Yellow lifeguard tower at the beach" />
               <figcaption class="gallery-caption">
-                <span>Street 04</span>
-                <span><!-- Add city or year --></span>
+                <span>Lifeguard Tower</span>
               </figcaption>
             </figure>
 
-            <!-- Replace images/street-5.jpg with your own file -->
-            <figure class="gallery-item">
-              <img
-                src="images/street-5.jpg"
-                alt="Street photograph placeholder 5"
-              />
+            <figure class="gallery-item gallery-item--portrait" data-category="street">
+              <img src="images/DSCF2217.jpg" alt="Sneakers hanging on a power line above a palm tree" />
               <figcaption class="gallery-caption">
-                <span>Street 05</span>
-                <span><!-- Add city or year --></span>
+                <span>Shoes on a Wire</span>
               </figcaption>
             </figure>
+
+            <figure class="gallery-item" data-category="people">
+              <img src="images/DSCF1230.JPG" alt="Busy indoor market stall with vendors and fresh produce" />
+              <figcaption class="gallery-caption">
+                <span>Market</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="street">
+              <img src="images/DSCF2219.jpg" alt="Green shed door with a sign reading 'Don't enter if you feeling sick'" />
+              <figcaption class="gallery-caption">
+                <span>Don't Enter</span>
+              </figcaption>
+            </figure>
+
+            <!-- NATURE -->
+            <figure class="gallery-item" data-category="nature">
+              <img src="images/DSCF0940.jpg" alt="Close-up of pink and white cherry blossom clusters against a blue sky" />
+              <figcaption class="gallery-caption">
+                <span>Cherry Blossoms</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="nature">
+              <img src="images/DSCF0943.jpg" alt="Cherry blossom tree framing a glass high-rise building" />
+              <figcaption class="gallery-caption">
+                <span>Blossom & Glass</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="nature" id="DSCF1293">
+              <img src="images/DSCF1293.jpg" alt="Pink magnolia flowers in full bloom" />
+              <figcaption class="gallery-caption">
+                <span>Magnolias</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="nature" id="DSCF2750">
+              <img src="images/DSCF2750.jpg" alt="Lush garden with bridge and trees" />
+              <figcaption class="gallery-caption">
+                <span>Garden Path</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="nature">
+              <img src="images/DSCF2777.JPG" alt="Vibrant pink dahlia flowers in bloom" />
+              <figcaption class="gallery-caption">
+                <span>Dahlias</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="nature">
+              <img src="images/DSCF2156.jpg" alt="Looking up at a palm tree against a blue sky" />
+              <figcaption class="gallery-caption">
+                <span>Palm Tree</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="nature">
+              <img src="images/DSCF2745.jpg" alt="Red bougainvillea blossoms against a bright blue sky" />
+              <figcaption class="gallery-caption">
+                <span>Bougainvillea</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="nature">
+              <img src="images/DSCF2792.jpg" alt="Two bees on a pink and white dahlia" />
+              <figcaption class="gallery-caption">
+                <span>Bees & Dahlias</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="nature">
+              <img src="images/DSCF2808.jpg" alt="Close-up of a pink dahlia flower" />
+              <figcaption class="gallery-caption">
+                <span>Pink Dahlia</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="nature">
+              <img src="images/DSCF2815.jpg" alt="Bee on a white wildflower" />
+              <figcaption class="gallery-caption">
+                <span>Bee</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="nature">
+              <img src="images/DSCF2061.jpg" alt="Dense tropical leaves with sunlight filtering through" />
+              <figcaption class="gallery-caption">
+                <span>Tropical Leaves</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="nature">
+              <img src="images/DSCF2545.jpg" alt="Tall bamboo stalks against a bright blue sky" />
+              <figcaption class="gallery-caption">
+                <span>Bamboo</span>
+              </figcaption>
+            </figure>
+
+            <!-- ANIMALS -->
+            <figure class="gallery-item gallery-item--portrait" data-category="animals" id="DSCF0668">
+              <img src="images/DSCF0668.jpg" alt="Two mallard ducks swimming in calm water" />
+              <figcaption class="gallery-caption">
+                <span>Mallards</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="animals">
+              <img src="images/DSCF1055.jpg" alt="Two Canada geese grazing under cherry blossoms" />
+              <figcaption class="gallery-caption">
+                <span>Geese</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="animals">
+              <img src="images/DSCF1142 2.jpg" alt="Black and white lop-eared rabbit resting on a table" />
+              <figcaption class="gallery-caption">
+                <span>Bunny</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="animals">
+              <img src="images/DSCF1755.jpg" alt="Black and white cat sitting on a tiled sidewalk" />
+              <figcaption class="gallery-caption">
+                <span>Street Cat</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="animals">
+              <img src="images/DSCF1761.jpg" alt="Black and white cat on a leash sitting on a brick sidewalk" />
+              <figcaption class="gallery-caption">
+                <span>Cat on a Leash</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="animals">
+              <img src="images/DSCF2066.jpg" alt="Cat grooming itself under a bench" />
+              <figcaption class="gallery-caption">
+                <span>Cat</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="animals" id="DSCF2092">
+              <img src="images/DSCF2092.jpg" alt="Tabby cat standing on grass by the ocean" />
+              <figcaption class="gallery-caption">
+                <span>Beach Cat</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="animals" id="DSCF2206">
+              <img src="images/DSCF2206.jpg" alt="Puppy on a red leash looking at the camera" />
+              <figcaption class="gallery-caption">
+                <span>Puppy</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="animals">
+              <img src="images/DSCF2502.jpg" alt="Brindle dog with an orange collar sitting outdoors" />
+              <figcaption class="gallery-caption">
+                <span>Dog</span>
+              </figcaption>
+            </figure>
+
+            <!-- CARS -->
+            <figure class="gallery-item gallery-item--portrait" data-category="cars">
+              <img src="images/DSCF1092.jpg" alt="Black Porsche 911 parked on a city street" />
+              <figcaption class="gallery-caption">
+                <span>Porsche 911</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="cars">
+              <img src="images/DSCF1574.jpg" alt="Close-up of a Lamborghini Huracán wheel and brake caliper" />
+              <figcaption class="gallery-caption">
+                <span>Huracán Detail</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="cars">
+              <img src="images/DSCF1602.jpg" alt="Row of Porsche GT cars lined up at a car show" />
+              <figcaption class="gallery-caption">
+                <span>Porsche Lineup</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="cars">
+              <img src="images/DSCF1732.jpg" alt="White Porsche 911 GT3 at a sunny car show" />
+              <figcaption class="gallery-caption">
+                <span>GT3</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="cars">
+              <img src="images/DSCF1743.jpg" alt="Bronze and black Audi R8 V10 side profile" />
+              <figcaption class="gallery-caption">
+                <span>Audi R8 V10</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="cars" id="DSCF1811">
+              <img src="images/DSCF1811.jpg" alt="Green Aston Martin Vantage side profile at a car show" />
+              <figcaption class="gallery-caption">
+                <span>Aston Martin</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="cars">
+              <img src="images/DSCF1814.jpg" alt="Olive green Corvette C8 side profile at a car show" />
+              <figcaption class="gallery-caption">
+                <span>Corvette C8</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item" data-category="cars">
+              <img src="images/DSCF1816.jpg" alt="Corvette interior with red leather seats and carbon fiber trim" />
+              <figcaption class="gallery-caption">
+                <span>Corvette Interior</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="cars">
+              <img src="images/DSCF1822.jpg" alt="Olive green Corvette C8 parked at a seaside car show" />
+              <figcaption class="gallery-caption">
+                <span>Corvette at the Shore</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="cars">
+              <img src="images/DSCF1832.jpg" alt="Red and black race car with butterfly doors open" />
+              <figcaption class="gallery-caption">
+                <span>Race Car</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="cars">
+              <img src="images/DSCF1846.jpg" alt="Black McLaren 720S Spider at a car show" />
+              <figcaption class="gallery-caption">
+                <span>McLaren 720S</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="cars">
+              <img src="images/DSCF1874.jpg" alt="Vintage green Porsche 914 in a parking lot" />
+              <figcaption class="gallery-caption">
+                <span>Porsche 914</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="cars">
+              <img src="images/DSCF1886.jpg" alt="Classic red Ford Mustang parked under a large tree" />
+              <figcaption class="gallery-caption">
+                <span>Mustang</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="cars">
+              <img src="images/DSCF1891.jpg" alt="Cream yellow Volkswagen Beetle convertible at a car show" />
+              <figcaption class="gallery-caption">
+                <span>VW Beetle</span>
+              </figcaption>
+            </figure>
+
+            <figure class="gallery-item gallery-item--portrait" data-category="cars">
+              <img src="images/DSCF1898.jpg" alt="Blue Mazda MX-5 Miata with pop-up headlights" />
+              <figcaption class="gallery-caption">
+                <span>Mazda Miata</span>
+              </figcaption>
+            </figure>
+
           </div>
         </div>
       </section>
     </main>
 
+    <!-- Lightbox overlay -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous photo">&#8592;</button>
+      <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+      <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next photo">&#8594;</button>
+    </div>
+
     <footer>
       <div class="container">
         <div class="footer-inner">
-          <div>&copy; 2026 Your Name Photography. All rights reserved.</div>
+          <div>&copy; 2026 Shot by Sheyla. All rights reserved.</div>
           <div class="footer-meta">
-            <span>Available worldwide</span>
-            <span>Portfolio template &mdash; customize with your own work.</span>
+            <span>Orange County, CA</span>
           </div>
         </div>
       </div>
     </footer>
+
+    <script>
+      const chips = document.querySelectorAll('.chip[data-filter]');
+      const items = document.querySelectorAll('.gallery-item');
+
+      function applyFilter(filter) {
+        chips.forEach(c => {
+          c.classList.toggle('chip--active', c.dataset.filter === filter);
+        });
+        items.forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      }
+
+      chips.forEach(chip => {
+        chip.addEventListener('click', () => applyFilter(chip.dataset.filter));
+      });
+
+
+      // Lightbox
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxClose = document.getElementById('lightbox-close');
+      const lightboxPrev = document.getElementById('lightbox-prev');
+      const lightboxNext = document.getElementById('lightbox-next');
+      let currentIndex = 0;
+
+      function getVisibleItems() {
+        return [...items].filter(item => item.style.display !== 'none');
+      }
+
+      function getAverageColor(imgEl) {
+        var canvas = document.createElement('canvas');
+        var ctx = canvas.getContext('2d');
+        canvas.width = 50;
+        canvas.height = 50;
+        ctx.drawImage(imgEl, 0, 0, 50, 50);
+        var data = ctx.getImageData(0, 0, 50, 50).data;
+        var r = 0, g = 0, b = 0, count = 0;
+        for (var i = 0; i < data.length; i += 16) {
+          r += data[i];
+          g += data[i + 1];
+          b += data[i + 2];
+          count++;
+        }
+        r = Math.round(r / count);
+        g = Math.round(g / count);
+        b = Math.round(b / count);
+        return { r: r, g: g, b: b };
+      }
+
+      function setLightboxBg(imgEl) {
+        try {
+          var c = getAverageColor(imgEl);
+          var darkR = Math.round(c.r * 0.25);
+          var darkG = Math.round(c.g * 0.25);
+          var darkB = Math.round(c.b * 0.25);
+          lightbox.style.background = 'rgba(' + darkR + ',' + darkG + ',' + darkB + ', 0.94)';
+        } catch (e) {
+          lightbox.style.background = '';
+        }
+      }
+
+      function openLightbox(index) {
+        const visible = getVisibleItems();
+        if (!visible.length) return;
+        currentIndex = (index + visible.length) % visible.length;
+        const img = visible[currentIndex].querySelector('img');
+        lightboxImg.classList.remove('is-zoomed');
+        lightboxImg.style.transformOrigin = '';
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        setLightboxBg(img);
+        lightbox.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+        lightboxPrev.style.display = visible.length > 1 ? '' : 'none';
+        lightboxNext.style.display = visible.length > 1 ? '' : 'none';
+      }
+
+      items.forEach(item => {
+        item.addEventListener('click', () => {
+          const visible = getVisibleItems();
+          openLightbox(visible.indexOf(item));
+        });
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        lightboxImg.classList.remove('is-zoomed');
+        lightboxImg.style.transformOrigin = '';
+        lightbox.style.background = '';
+        document.body.style.overflow = '';
+      }
+
+      lightboxImg.addEventListener('click', e => {
+        e.stopPropagation();
+        if (lightboxImg.classList.contains('is-zoomed')) {
+          lightboxImg.classList.remove('is-zoomed');
+          lightboxImg.style.transformOrigin = '';
+        } else {
+          const rect = lightboxImg.getBoundingClientRect();
+          const x = ((e.clientX - rect.left) / rect.width) * 100;
+          const y = ((e.clientY - rect.top) / rect.height) * 100;
+          lightboxImg.style.transformOrigin = x + '% ' + y + '%';
+          lightboxImg.classList.add('is-zoomed');
+        }
+      });
+
+      lightboxImg.addEventListener('mousemove', e => {
+        if (!lightboxImg.classList.contains('is-zoomed')) return;
+        const rect = lightboxImg.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        lightboxImg.style.transformOrigin = x + '% ' + y + '%';
+      });
+
+      lightboxPrev.addEventListener('click', e => { e.stopPropagation(); openLightbox(currentIndex - 1); });
+      lightboxNext.addEventListener('click', e => { e.stopPropagation(); openLightbox(currentIndex + 1); });
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', e => {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', e => {
+        if (!lightbox.classList.contains('is-open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') openLightbox(currentIndex - 1);
+        if (e.key === 'ArrowRight') openLightbox(currentIndex + 1);
+      });
+    </script>
   </body>
 </html>
