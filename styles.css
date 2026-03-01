@@ -520,10 +520,11 @@ header {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(15, 23, 42, 0.7),
-    rgba(15, 23, 42, 0) 45%
+    rgba(15, 23, 42, 0.88),
+    rgba(15, 23, 42, 0.3) 35%,
+    rgba(15, 23, 42, 0) 55%
   );
-  opacity: 0;
+  opacity: 1;
   transition: opacity 180ms ease-out;
   pointer-events: none;
 }
@@ -542,6 +543,7 @@ header {
   left: 1rem;
   right: 1rem;
   bottom: 0.9rem;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -549,7 +551,8 @@ header {
   font-size: 0.8rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #e5e7eb;
+  color: #f3f4f6;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0, 0, 0, 0.5);
 }
 
 .gallery-caption span:last-child {
@@ -689,6 +692,30 @@ header {
   background: #ffffff;
   color: var(--color-text);
   transform: translateY(-1px);
+}
+
+/* Work-in-progress card */
+
+.wip-card {
+  max-width: 600px;
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-lg);
+  background: rgba(248, 250, 252, 0.9);
+  border: 1.5px dashed rgba(127, 171, 138, 0.6);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.wip-text {
+  font-size: 1.15rem;
+  color: var(--color-text);
+  margin: 0 0 1rem;
+}
+
+.wip-subtext {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  margin: 0;
 }
 
 /* Footer */

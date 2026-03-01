@@ -31,6 +31,7 @@
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="gallery.html">Gallery</a>
+            <a href="clients.html">Client Work</a>
             <a href="contact.html" aria-current="page">Contact</a>
           </nav>
         </div>
@@ -50,16 +51,10 @@
           <!-- Contact layout: form on the left, info on the right -->
           <div class="contact-layout">
 
-            <!-- Contact form -->
-            <!-- NOTE: This form is front-end only. Backend handling is not implemented.
-                 To enable submissions, connect it to a service like Formspree (https://formspree.io)
-                 by setting the action attribute and method="POST". -->
             <div class="contact-card">
               <form
                 class="contact-form-grid"
-                action="#"
-                method="POST"
-                novalidate
+                id="contact-form"
               >
                 <div class="field">
                   <label for="contact-name">Name</label>
@@ -114,12 +109,27 @@
                     Send Message
                   </button>
                   <small style="display: block; margin-top: 0.75rem; color: var(--color-muted);">
-                    <!-- Update response time to reflect your availability. -->
                     I typically respond within 2–3 business days.
                   </small>
                 </div>
               </form>
             </div>
+
+            <script>
+              document.getElementById('contact-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+                var name = document.getElementById('contact-name').value;
+                var email = document.getElementById('contact-email').value;
+                var subject = document.getElementById('contact-subject').value || 'Portfolio Inquiry';
+                var message = document.getElementById('contact-message').value;
+                var body = 'Hi Sheyla,%0D%0A%0D%0A' +
+                  encodeURIComponent(message) +
+                  '%0D%0A%0D%0AFrom: ' + encodeURIComponent(name) +
+                  '%0D%0AEmail: ' + encodeURIComponent(email);
+                window.location.href = 'mailto:shotbysheyla@gmail.com?subject=' +
+                  encodeURIComponent(subject) + '&body=' + body;
+              });
+            </script>
 
             <!-- Contact info & social links -->
             <div class="contact-meta">
@@ -141,7 +151,7 @@
 
               <div class="contact-meta-block">
                 <div class="contact-label">Availability</div>
-                <div class="contact-value">Open for collaborations &amp; local work within a 15-mile radius</div>
+                <div class="contact-value">Open for collaborations &amp; local work within a 20-mile radius</div>
               </div>
 
               <div class="contact-meta-block">
