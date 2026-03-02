@@ -55,6 +55,8 @@
               <form
                 class="contact-form-grid"
                 id="contact-form"
+                action="https://formspree.io/f/xbdavyyj"
+                method="POST"
               >
                 <div class="field">
                   <label for="contact-name">Name</label>
@@ -115,21 +117,6 @@
               </form>
             </div>
 
-            <script>
-              document.getElementById('contact-form').addEventListener('submit', function (e) {
-                e.preventDefault();
-                var name = document.getElementById('contact-name').value;
-                var email = document.getElementById('contact-email').value;
-                var subject = document.getElementById('contact-subject').value || 'Portfolio Inquiry';
-                var message = document.getElementById('contact-message').value;
-                var body = 'Hi Sheyla,%0D%0A%0D%0A' +
-                  encodeURIComponent(message) +
-                  '%0D%0A%0D%0AFrom: ' + encodeURIComponent(name) +
-                  '%0D%0AEmail: ' + encodeURIComponent(email);
-                window.location.href = 'mailto:shotbysheyla@gmail.com?subject=' +
-                  encodeURIComponent(subject) + '&body=' + body;
-              });
-            </script>
 
             <!-- Contact info & social links -->
             <div class="contact-meta">
