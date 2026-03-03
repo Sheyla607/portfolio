@@ -319,6 +319,76 @@ header {
   opacity: 1;
 }
 
+.slide-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.3);
+  color: #f9fafb;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.slide-prev { left: 0.75rem; }
+.slide-next { right: 0.75rem; }
+
+.slide-nav:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slide-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  z-index: 5;
+  overflow: hidden;
+  max-width: 90px;
+}
+
+.slide-dot {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  padding: 0;
+  transition: background 300ms ease, width 300ms ease, height 300ms ease, opacity 300ms ease;
+}
+
+.slide-dot.active {
+  width: 7px;
+  height: 7px;
+  background: #3b82f6;
+}
+
+.slide-dot.near {
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.slide-dot.far {
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;

@@ -120,6 +120,9 @@
                 </div>
               </div>
               <div class="hero-overlay"></div>
+              <button class="slide-nav slide-prev" id="slide-prev" aria-label="Previous photo">&#8592;</button>
+              <button class="slide-nav slide-next" id="slide-next" aria-label="Next photo">&#8594;</button>
+              <div class="slide-dots" id="slide-dots"></div>
             </div>
           </div>
         </div>
@@ -158,14 +161,60 @@
     </footer>
     <script>
       (function () {
-        const slides = document.querySelectorAll('.hero-slide');
+        var slides = document.querySelectorAll('.hero-slide');
         if (slides.length < 2) return;
-        let current = 0;
-        setInterval(function () {
+        var current = 0;
+        var timer;
+        var dotsContainer = document.getElementById('slide-dots');
+
+        slides.forEach(function (_, i) {
+          var dot = document.createElement('button');
+          dot.className = 'slide-dot' + (i === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', 'Go to photo ' + (i + 1));
+          dot.addEventListener('click', function () { goTo(i); });
+          dotsContainer.appendChild(dot);
+        });
+        var dots = dotsContainer.querySelectorAll('.slide-dot');
+
+        function updateDots() {
+          dots.forEach(function (dot, i) {
+            dot.classList.remove('active', 'near', 'far');
+            var dist = Math.abs(i - current);
+            if (i === current) dot.classList.add('active');
+            else if (dist <= 2) dot.classList.add('near');
+            else dot.classList.add('far');
+          });
+          var dotWidth = 9.35;
+          var offset = current * dotWidth - 40;
+          if (offset < 0) offset = 0;
+          var maxOffset = (slides.length * dotWidth) - 90;
+          if (offset > maxOffset && maxOffset > 0) offset = maxOffset;
+          dotsContainer.scrollLeft = offset;
+        }
+        updateDots();
+
+        function goTo(index) {
           slides[current].classList.remove('active');
-          current = (current + 1) % slides.length;
+          current = (index + slides.length) % slides.length;
           slides[current].classList.add('active');
-        }, 3000);
+          updateDots();
+          resetTimer();
+        }
+
+        function resetTimer() {
+          clearInterval(timer);
+          timer = setInterval(function () { goTo(current + 1); }, 4000);
+        }
+
+        document.getElementById('slide-prev').addEventListener('click', function () { goTo(current - 1); });
+        document.getElementById('slide-next').addEventListener('click', function () { goTo(current + 1); });
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowLeft') goTo(current - 1);
+          if (e.key === 'ArrowRight') goTo(current + 1);
+        });
+
+        resetTimer();
       })();
     </script>
   </body>
